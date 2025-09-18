@@ -1,16 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:stful_task/counter_card.dart';
-// import 'package:collection/collection.dart';
-
-class CounterModel with ChangeNotifier {
-  final List<int> _values = List.filled(5, 0);
-  int get values => _values.toList().reduce((value, element) => value + element);
-
-  void add(int value) {
-    _values.add(value);
-    notifyListeners();
-  }
-}
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
