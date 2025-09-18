@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CounterCard extends StatefulWidget {
-  const CounterCard({super.key});
+  final ValueChanged<int> onChanged;
+
+  const CounterCard({super.key, required this.onChanged});
 
   @override
   State<CounterCard> createState() => _CounterCardState();
@@ -14,6 +16,7 @@ class _CounterCardState extends State<CounterCard> {
     setState(() {
       _counter++;
     });
+    widget.onChanged(_counter);
   }
 
   @override
