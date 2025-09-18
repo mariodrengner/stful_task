@@ -8,6 +8,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           spacing: 16,
           children: [
             CounterCard(),
